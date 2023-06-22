@@ -31,6 +31,12 @@ class Produtos_Tamanhos extends Model
     // RELACIONAMENTOS
 
     public function produto(): object {
+        return $this->hasOne(Produto::class,
+                                'id_produto',
+                                'id_produto');
+    }
+
+    public function tamanho(): object {
         return $this->hasOne(Tamanho::class,
                                 'id_tamanho',
                                 'id_tamanho');
