@@ -46,7 +46,7 @@ Route::prefix('cargos')->controller(CargoController::class)
         Route::get('/edit/{id}', 'edit')->name('cargo.edit');
         Route::post('/store', 'store')->name('cargo.store');
         Route::post('/update', 'update')->name('cargo.update');
-        Route::post('/destroy', 'destroy')->name('cargo.destroy');
+        Route::post('/destroy/{id}', 'destroy')->name('cargo.destroy');
     });
 
     // Cliente -------------------------------------
